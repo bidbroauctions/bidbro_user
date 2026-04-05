@@ -6,7 +6,7 @@ import { useUserStore } from "@/store/useUserStore";
 import { useDashboardContext } from "./context/DashboardContext";
 import WalletService from "../api/WalletService";
 import { getMyAccount } from "../auth/api/AuthService";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const Page = () => {
   const router = useRouter();

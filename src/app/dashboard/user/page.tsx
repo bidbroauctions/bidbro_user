@@ -8,7 +8,7 @@ import { BidForAnItem } from "../component/BidForAnItem";
 import { bids, auctions } from "@/app/mock/auction";
 import { useUserStore } from "@/store/useUserStore";
 import { useDashboardContext } from "../context/DashboardContext";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 import WalletService from "@/app/api/WalletService";
 import { getMyAccount } from "@/app/auth/api/AuthService";
 
