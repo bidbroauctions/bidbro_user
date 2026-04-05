@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: #182230;
+  --header-color: #101828;
+  --highlight-color: #475467;
+  --placeholder-color: #667085;
+  --button-text-color: #344054;
+  foundation_yellow_y300: #f68b36;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .animate-ripple {
+    animation: ripple 0.5s linear;
+  }
+
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+}
+
+.select {
+  appearance: none; /* Removes the default down arrow */
+  -webkit-appearance: none; /* Removes the default down arrow in Safari */
+  -moz-appearance: none; /* Removes the default down arrow in Firefox */
+  background: url("../assets/icons/Secondary/Outline/bx-chevron-down.svg")
+    no-repeat right 1rem center;
+  background-color: #eaecf0;
+  background-size: 1rem; /* Size of the custom arrow */
+  padding-right: 2rem; /* Adds space for the arrow */
+}
+
+.react-datepicker-popper {
+  z-index: 50 !important;
+}
+
+.react-datepicker__header {
+  background-color: #f68b36 !important; /* Primary color */
+  border-bottom: none !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #f68b36 !important;
+  color: white !important;
+}
+
+.react-datepicker__header .react-datepicker-year-header {
+  color: white !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f68b36 !important;
+  color: white !important;
+}
+
+.react-datepicker__month-wrapper {
+  margin: 0.8rem 0 !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+}
+
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: white !important;
+}

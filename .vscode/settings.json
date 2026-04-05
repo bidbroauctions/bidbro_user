@@ -1,0 +1,9 @@
+{
+  "cSpell.words": ["ACTIONED", "fixel", "Formik", "porshe", "SIGNUP"],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#11332C",
+    "titleBar.activeBackground": "#18483D",
+    "titleBar.activeForeground": "#F6FCFB"
+  },
+  "githubPullRequests.ignoredPullRequestBranches": ["dev"]
+}

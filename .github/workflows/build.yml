@@ -1,0 +1,38 @@
+name: Build on dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from your repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20" # or whatever Node.js version you're using
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      # Run the build command
+      - name: Run build
+        run: npm run build
+
+      # Optionally: You can cache your node_modules to make future builds faster
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
